@@ -16,6 +16,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     TasksComponent,
     ToDosComponent
   ],
+  exports:[
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
