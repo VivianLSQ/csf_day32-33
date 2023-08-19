@@ -6,15 +6,17 @@ import { Task } from '../models/task';
 })
 export class TasksService {
 
-  //Intialize
-  // tasks: Task [] =[];
-  // idx: number = 1;
-  //set priority
+  tasks: Task [] =[];
+  idx: number = 1;
 
 
   //show completed tasks
+  getTasks(taskCompleted = true): Task[]{
+    return this.tasks.filter( task => task.isCompleted)
+  }
+
   //add tasks
-  //find index and add to compeleted tasks
+  //find index and add to completed tasks
 
   //Optional:
   //edit task

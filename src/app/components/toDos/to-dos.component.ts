@@ -37,10 +37,6 @@ export class ToDosComponent {
     });
   }
 
-  // getTasks(){
-
-
-  // }
 
 addTask(){
     console.log(this.taskForm.value);

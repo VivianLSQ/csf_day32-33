@@ -3,17 +3,11 @@
     <tr>
         <td>Task Details:</td>
         <input type="text" formControlName="details">
-        <mat-icon >description</mat-icon>
+        <!-- <mat-icon> description</mat-icon> -->
     </tr>
 
     <br>
 
-    <!-- <tr>
-      <td>Priority Level: </td>
-      Low <input type="radio" formControlName="priority" value="low">
-      Medium <input type="radio" formControlName="priority" value="medium">
-      High <input type="radio" formControlName="priority" value="high">
-    </tr> -->
     <tr>
       <mat-radio-group formControlName="priority" >Priority Level:
         <mat-radio-button value="low">Low</mat-radio-button>
@@ -24,11 +18,7 @@
 
     <br>
 
-    <!-- <tr>
-      <td>Due Date (YYYY/MM/DD): </td>
-      <input type="text" formControlName="dueDate">
-    </tr> -->
-      <!--Figure out how to change format to DD/MM/YY and show calendar drop down option-->
+
     <tr>
       <mat-form-field>
         <mat-label> Due Date</mat-label>
@@ -70,3 +60,16 @@
 </ng-template>
 
 -->
+
+    <!-- <tr>
+      <td>Priority Level: </td>
+      Low <input type="radio" formControlName="priority" value="low">
+      Medium <input type="radio" formControlName="priority" value="medium">
+      High <input type="radio" formControlName="priority" value="high">
+    </tr> -->
+
+    <!-- <tr>
+      <td>Due Date (YYYY/MM/DD): </td>
+      <input type="text" formControlName="dueDate">
+    </tr> -->
+      <!--Figure out how to change format to DD/MM/YY and show calendar drop down option-->
