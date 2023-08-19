@@ -1,0 +1,72 @@
+<form [formGroup]="taskForm" (ngSubmit)="addTask()">
+  <table>
+    <tr>
+        <td>Task Details:</td>
+        <input type="text" formControlName="details">
+        <mat-icon >description</mat-icon>
+    </tr>
+
+    <br>
+
+    <!-- <tr>
+      <td>Priority Level: </td>
+      Low <input type="radio" formControlName="priority" value="low">
+      Medium <input type="radio" formControlName="priority" value="medium">
+      High <input type="radio" formControlName="priority" value="high">
+    </tr> -->
+    <tr>
+      <mat-radio-group formControlName="priority" >Priority Level:
+        <mat-radio-button value="low">Low</mat-radio-button>
+        <mat-radio-button value="medium">Medium</mat-radio-button>
+        <mat-radio-button value="high">High</mat-radio-button>
+      </mat-radio-group>
+    </tr>
+
+    <br>
+
+    <!-- <tr>
+      <td>Due Date (YYYY/MM/DD): </td>
+      <input type="text" formControlName="dueDate">
+    </tr> -->
+      <!--Figure out how to change format to DD/MM/YY and show calendar drop down option-->
+    <tr>
+      <mat-form-field>
+        <mat-label> Due Date</mat-label>
+        <input matInput [matDatepicker] = "picker" formControlName="dueDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-hint> DD/MM/YYYY</mat-hint>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </tr>
+
+    <hr>
+
+    <tr>
+      <td>
+        <button type="submit" [disabled]="taskForm.get('dueDate')?.hasError('futureDate')">Add New Task</button>
+      </td>
+    </tr>
+  </table>
+
+</form>
+
+
+<!--practice ngIf, else -->
+
+<!--
+  <div *ngIf="getTasks().length > 0; else noTasks" >
+
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<ng-template #noTasks>
+  <p> No existing tasks to complete. Dobby is free!</p>
+</ng-template>
+
+-->
